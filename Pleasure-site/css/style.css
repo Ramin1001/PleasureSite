@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 5000px;
+}
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+}
+.clearfix{
+    clear: both;
+}
+.f-left{
+    float: left;
+}
+.f-right{
+    float: right;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* HEADER STARTS */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+header .top{
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.548);
+    color: white;
+    font-size: 0.8em;
+}
+
+header .tel a{
+    color: white;
+    text-decoration: none;
+}
+
+header .top .icons li{
+    float: left;
+}
+header .top .icons a{
+    display: inline-block;
+    padding: 0 15px;
+    color: white;
+    transition: color 0.3s linear;
+}
+header .top .icons a:hover{
+    color: #fc9f1c;
+}
+header .separator span{
+    border-right: 1px solid rgba(255, 255, 255, 0.445);
+    margin: 0 10px;
+}
+
+
+header .bottom{
+    padding: 0 15px;
+}
+header .brand{
+    width: 120px;
+    margin-top: 15px;
+}
+header nav .menu > li{
+    float: left;
+    position: relative;
+}
+header nav .menu > li > a{
+    display: inline-block;
+    padding: 25px;
+    color: white;
+    font-size: 0.8em;
+}
+header nav .menu > li > a:hover{
+    color: #fc9f1c;
+}
+header nav .menu > li:hover ul{
+    display: block;
+}
+header nav .menu > li > a i{
+    margin-left: 10px;
+}
+header nav .menu .innerMenu{
+    position: absolute;
+    width: 200px;
+    display: none;
+}
+header nav .menu .innerMenu a{
+    display: block;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 0.8em;
+    transition: background-color 0.3s linear;
+}
+header nav .menu .innerMenu a:hover{
+    background-color: #fc9f1c;
+}
+/* HEADER ENDS */
+
+
+/* SLIDER STARTS */
+
+#slider{
+    height: 700px;
+    background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../images/slider.jpeg") center center ;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+#slider .wrapper{
+    text-align: center;
+    color: white;
+    line-height: 60px;
+}
+#slider .wrapper h3{
+    font-size: 3em;
+}
+#slider .wrapper p{
+    font-size: 1.5em;
+}
+#slider .wrapper button{
+    background-color: transparent;
+    border: 3px solid #fc9f1c;
+    color: white;
+    padding: 5px 25px;
+    border-radius: 3px;
+    font-size: 1em;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+#slider .wrapper button:hover{
+    background-color: #fc9f1c;
+}
+
+/* SLIDER ENDS */
+
+
+
+/* PRODUCTS STARTS */
+
+#pro{
+    height: 150px;
+    background-color: #012b72;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#pro .wrapper{
+    display: flex;
+}
+#pro .proDiv{
+    position: relative;
+    width: 20%;
+    height: 150px;
+    text-align: center;
+    border-left: 0.5px solid rgba(255, 255, 255, 0.431);
+}
+#pro .proDiv > a{
+    display: block;
+    height: 100%;
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+#pro .proDiv > a i{
+    font-size: 2.5em;
+}
+#pro .proDiv > a .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#pro .proDiv > a .inner::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 0%;
+    height: 0;
+    transition: all linear 0.2s;
+}
+#pro .proDiv > a .inner:hover::after{
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    border: 0.5px solid #00baf3;
+}
+#pro .proDiv > a .inner::before{
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 207%;
+    left: -16%;
+    top: -116%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(37deg);
+    transition: all linear 0.2s;
+}
+#pro .proDiv > a .inner:hover::before{
+    left: 104%;
+    top: -3%;
+}
+#pro .proDiv > a .inner p{
+    margin-top: 15px;
+}
+
+#pro .upMenu{
+    position: absolute;
+    width: 100%;
+    bottom: 170px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+#pro .upMenu a{
+    display: block;
+    padding: 20px;
+    background-color: white;
+    color: #555;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    text-align: left;
+    border-bottom: 1px solid rgba(85, 85, 85, 0.1);
+}
+#pro .upMenu a::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0%;
+    border-bottom: 1px solid #00baf3;
+    left: 50%;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
+}
+#pro .upMenu a:hover{
+    width: 100%;
+    color: #00baf3;
+}
+#pro .upMenu a:hover::after{
+    width: 100%;
+    left: 0%;
+}
+#pro .proDiv:hover > a{
+    background-color: white;
+    color: #00baf3;
+}
+#pro .proDiv:hover .upMenu{
+    visibility: visible;
+    opacity: 1;
+    bottom: 150px;
+}
+/* PRODUCTS ENDS */
